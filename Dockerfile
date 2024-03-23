@@ -8,6 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install Python dependencies
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN pip install Flask gunicorn
 

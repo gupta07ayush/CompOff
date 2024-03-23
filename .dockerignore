@@ -1,0 +1,24 @@
+# Exclude version control directories
+.git
+.gitignore
+
+# Exclude compiled Python files
+*.pyc
+
+# Exclude virtual environment directories
+venv/
+.env
+
+# Exclude Docker-related files
+Dockerfile
+.dockerignore
+
+# Exclude development and editor files
+*.log
+.vscode/
+.idea/
+*.swp
+
+# Exclude other unnecessary files and directories
+node_modules/
+__pycache__/
