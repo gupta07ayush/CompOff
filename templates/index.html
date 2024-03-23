@@ -18,5 +18,33 @@
             <p class="result">Your comp off will expire on: {{ expiry_date }}</p>
         {% endif %}
     </div>
+    
+    <!-- Table to display input and output -->
+    <div class="container">
+        <h2>Input and Output History</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Input (Holiday Working Date)</th>
+                    <th>Output (Comp Off Date)</th>
+                    <th>Action</th> <!-- New column for delete button -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for record in records %}
+                    <tr>
+                        <td>{{ record.input_date }}</td>
+                        <td>{{ record.output_date }}</td>
+                        <td>
+                            <form action="/delete" method="post">
+                                <input type="hidden" name="record_index" value="{{ loop.index0 }}">
+                                <button type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

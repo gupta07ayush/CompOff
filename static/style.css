@@ -23,6 +23,11 @@ h1 {
     color: #45a049; /* Blue color */
 }
 
+h2 {
+    text-align: center;
+    color: #45a049; /* Blue color */
+}
+
 form {
     text-align: center;
 }
@@ -63,4 +68,38 @@ input[type="submit"]:hover {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Increased box shadow */
+}
+
+/* New section CSS */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #555; /* Border color */
+    color: #fff; /* Text color */
+}
+
+th {
+    background-color: #45a049; /* Blue color */
+}
+
+td {
+    background-color: #333; /* Dark gray input background color */
+}
+
+.delete-button {
+    background-color: #ff6666; /* Red color for delete button */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: #e64d4d; /* Darker shade of red on hover */
 }
