@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comp Off Expiry Date Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Comp Off Expiry Date Calculator</h1>
+        <form action="/" method="post">
+            <label for="holiday_date">Enter the date of the holiday working:</label><br>
+            <input type="date" id="holiday_date" name="holiday_date"><br><br>
+            <input type="submit" value="Calculate">
+        </form>
+        {% if expiry_date %}
+            <p class="result">Your comp off will expire on: {{ expiry_date }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
